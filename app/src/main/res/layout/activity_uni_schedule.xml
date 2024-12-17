@@ -85,17 +85,17 @@
         android:padding="8dp"
         android:textColor="#000000" />
 
-    <!-- 교시 (1~7교시) -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_row="1"
-        android:layout_rowWeight="1"
-        android:layout_column="0"
-        android:gravity="center"
-        android:text="1교시"
-        android:textStyle="bold"
-        android:textColor="#000000" />
+    <!-- 시간 (9시 ~ 17시) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:gravity="center"
+            android:text="09시"
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -104,7 +104,7 @@
         android:layout_rowWeight="1"
         android:layout_column="0"
         android:gravity="center"
-        android:text="2교시"
+        android:text="10시"
         android:textStyle="bold"
         android:textColor="#000000" />
 
@@ -115,7 +115,7 @@
         android:layout_rowWeight="1"
         android:layout_column="0"
         android:gravity="center"
-        android:text="3교시"
+        android:text="11시"
         android:textStyle="bold"
         android:textColor="#000000" />
 
@@ -126,7 +126,7 @@
         android:layout_rowWeight="1"
         android:layout_column="0"
         android:gravity="center"
-        android:text="4교시"
+        android:text="12시"
         android:textStyle="bold"
         android:textColor="#000000" />
 
@@ -137,7 +137,7 @@
         android:layout_rowWeight="1"
         android:layout_column="0"
         android:gravity="center"
-        android:text="5교시"
+        android:text="13시"
         android:textStyle="bold"
         android:textColor="#000000" />
 
@@ -148,7 +148,7 @@
         android:layout_rowWeight="1"
         android:layout_column="0"
         android:gravity="center"
-        android:text="6교시"
+        android:text="14시"
         android:textStyle="bold"
         android:textColor="#000000" />
 
@@ -159,7 +159,29 @@
         android:layout_rowWeight="1"
         android:layout_column="0"
         android:gravity="center"
-        android:text="7교시"
+        android:text="15시"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_row="8"
+        android:layout_rowWeight="1"
+        android:layout_column="0"
+        android:gravity="center"
+        android:text="16시"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_row="9"
+        android:layout_rowWeight="1"
+        android:layout_column="0"
+        android:gravity="center"
+        android:text="17시"
         android:textStyle="bold"
         android:textColor="#000000" />
 </GridLayout>

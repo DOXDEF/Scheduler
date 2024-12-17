@@ -1,12 +1,11 @@
 package com.example.scheduler;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,15 +14,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.btn_elementary).setOnClickListener(v -> navigateToSchedule("elementary"));
-        findViewById(R.id.btn_middle).setOnClickListener(v -> navigateToSchedule("middle"));
-        findViewById(R.id.btn_high).setOnClickListener(v -> navigateToSchedule("high"));
-        findViewById(R.id.btn_university).setOnClickListener(v -> navigateToSchedule("university"));
-    }
+        // 버튼 초기화
+        Button btnElementary = findViewById(R.id.btn_elementary);
+        Button btnUniversity = findViewById(R.id.btn_university);
 
-    private void navigateToSchedule(String userType) {
-        Intent intent = new Intent(this, ScheduleActivity.class);
-        intent.putExtra("USER_TYPE", userType);
-        startActivity(intent);
+        // 초/중/고등학생 버튼 클릭 시
+        btnElementary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // ScheduleActivity로 이동
+                Intent intent = new Intent(MainActivity.this, ScheduleActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 대학생 버튼 클릭 시
+        btnUniversity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // UniScheduleActivity로 이동
+                Intent intent = new Intent(MainActivity.this, UniScheduleActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
